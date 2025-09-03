@@ -11,4 +11,6 @@ Bienvenido a las entradas del portafolio. UsÃ¡ la plantilla para crear nuevas pÃ
 - Plantilla: [plantilla.md](plantilla.md)
 - Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
 - Segunda entrada: [02-trabajo-practico2.md](02-trabajo-practico2.md)
+- Tercera entrada: [03-trabajo-practico3.md](03-trabajo-practico3.md)
+-
 
