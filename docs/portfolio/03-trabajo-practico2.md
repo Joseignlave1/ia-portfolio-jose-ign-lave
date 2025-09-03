@@ -253,7 +253,8 @@ Se me ocurre crear una feature que sea "SocioEconomical Level" que tenga 3 valor
 y fare (costo del ticket)
 """"
 ## Evidencias
-- Enlace a material o capturas en `docs/assets/`
+https://github.com/Joseignlave1/IA1-Practico-2
+https://colab.research.google.com/drive/1HXkjgU79KTITVCSK9nTinmzM5BVdNChu#scrollTo=mqOVyV-0O-CD
 
 ## Reflexión
 Lo más desafiante, lo más valioso, próximos pasos.
