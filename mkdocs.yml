@@ -24,4 +24,3 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.tasklist:
       custom_checkbox: true
-fetch-depth: 0
