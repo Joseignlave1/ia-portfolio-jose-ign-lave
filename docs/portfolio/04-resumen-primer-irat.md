@@ -147,7 +147,6 @@ Ejemplos de *parametric machine learning algorithms* pueden ser:
 
 **Examples:**
 
-![Captura 2](../assets/linear.png)
 
 ![Regression LDA](../assets/regression-lda-logistic.png)
 
