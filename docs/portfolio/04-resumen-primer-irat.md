@@ -119,7 +119,7 @@ Ejemplos de *parametric machine learning algorithms* pueden ser:
 
 **Irreducible Error:**
 
-![Captura 1](../assets/captura-2025-08-19-161650.png)
+![Captura 1](../assets/irreducible-error.png)
 
 **Bias Error:**
 
@@ -147,7 +147,7 @@ Ejemplos de *parametric machine learning algorithms* pueden ser:
 
 **Examples:**
 
-![Captura 2](../assets/captura-2025-08-19-163454.png)
+![Captura 2](../assets/linear.png)
 
 ![Regression LDA](../assets/regression-lda-logistic.png)
 
