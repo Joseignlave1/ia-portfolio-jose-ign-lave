@@ -14,5 +14,4 @@ Bienvenido a las entradas del portafolio. UsÃ¡ la plantilla para crear nuevas pÃ
 - Tercera entrada: [03-trabajo-practico2.md](03-trabajo-practico2.md)
 - Cuarta Entrada: [04-resumen-primer-irat.md](04-resumen-primer-irat.md)
 - Quinta Entrada: [05-trabajo-practico4.md](05-trabajo-practico4.md)
-
-
+- Sexta Entrada: [06-trabajo-practico5.md](06-trabajo-practico5.md)
