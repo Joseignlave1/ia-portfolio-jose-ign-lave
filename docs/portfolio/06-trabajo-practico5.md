@@ -1,107 +1,161 @@
 ---
-title: "Entrada 06 — Clustering y PCA: Segmentación de Clientes"
+title: "Entrada 06 — Clasificación y Validación de Modelos"
 date: 2025-09-21
 ---
 
-# Entrada 06 — Sexto trabajo práctico
+# Entrada 06 — Quinto trabajo práctico~~
+~~
 
 ## Contexto
-En este trabajo práctico exploramos técnicas de **segmentación de clientes** aplicando algoritmos de clustering y reducción de dimensionalidad.  
-Se utilizó el dataset **Mall Customer Segmentation**, que contiene información demográfica y de comportamiento de ~200 clientes.  
-El objetivo fue descubrir patrones en el gasto y los ingresos, con el fin de crear perfiles útiles para estrategias de marketing.  
-
-El flujo de trabajo se guió con la metodología **CRISP-DM**, pasando por fases de comprensión del negocio, preparación de datos, modelado y evaluación.  
+En este trabajo práctico exploramos técnicas avanzadas de clasificación y validación de modelos.  
+Se utilizaron clasificadores lineales con regularización L2 (RidgeClassifier) y modelos de ensamble (RandomForestClassifier),  
+junto con estrategias de validación cruzada como StratifiedKFold.  
+Además, se profundizó en conceptos clave como clases balanceadas vs desbalanceadas, métricas de evaluación (accuracy, precision, recall, f1-score)  
+y la importancia de evitar el data leakage mediante Pipelines.  
+También se abordaron métodos de optimización de hiperparámetros (GridSearchCV y RandomizedSearchCV).  
 
 ## Objetivos
-- Entender la importancia de la fase de *Business Understanding* en problemas de segmentación.  
-- Aplicar normalización con diferentes scalers (MinMax, Standard, Robust) y evaluar su impacto en clustering.  
-- Usar **PCA** para reducir la dimensionalidad y visualizar los datos en 2D.  
-- Comparar **PCA** con técnicas de selección de features (Forward, Backward, RFE).  
-- Identificar el número óptimo de clusters usando **Elbow Method** y **Silhouette Score**.  
-- Aplicar diferentes algoritmos de clustering (KMeans, DBSCAN, HDBSCAN, GMM, Spectral, Agglomerative).  
-- Evaluar interpretabilidad vs performance en un contexto real de negocio.  
+- Comprender el funcionamiento de RidgeClassifier y RandomForestClassifier.  
+- Entender el concepto y la aplicación de técnicas de validación cruzada (cross_val_score, StratifiedKFold).  
+- Identificar la diferencia entre clases balanceadas y desbalanceadas y su impacto en la evaluación.  
+- Analizar la importancia de elegir métricas adecuadas (accuracy, precision, recall, f1-score).  
+- Entender qué es data leakage y cómo evitarlo con Pipelines.  
+- Entender el concepto de pipeline, y por qué es importante utilizarlo.  
+- Implementar estrategias de optimización de hiperparámetros con GridSearchCV y RandomizedSearchCV.  
+- Entender cómo se deciden la importancia de las variables en Random Forest.  
+- Comprender el concepto de sesgo.  
+- Entender cómo detectar sesgos en los modelos.  
 
 ## Actividades (con tiempos estimados)
-- Exploración inicial del dataset y estadísticas descriptivas — 20 min  
-- Análisis de escalas y aplicación de scalers — 30 min  
-- Implementación de PCA y visualización en 2D — 40 min  
-- Ejecución de KMeans con búsqueda de K óptimo (Elbow + Silhouette) — 45 min  
-- Pruebas con otros algoritmos (DBSCAN, HDBSCAN, GMM, Spectral, Agglomerative) — 60 min  
-- Ejercicios de selección de features (Forward, Backward, RFE) y comparación con PCA — 50 min  
-- Redacción de reflexiones finales y preguntas guía — 30 min  
+- Investigación del dataset: tamaño, características y balance de clases — 15 min  
+- Entender implementación paso a paso de RidgeClassifier y análisis de regularización L2 — 20 min  
+- Entender entrenamiento paso a paso de RandomForestClassifier y revisión de cómo elige RandomForest las features importantes — 40 min  
+- Entender paso a paso la validación cruzada con KFold y StratifiedKFold — 30 min  
+- Entender la optimización de hiperparámetros con GridSearchCV y RandomizedSearchCV — 40 min  
+- Responder las preguntas planteadas, investigando acerca de conceptos como data leakage y sesgos en modelos de clasificación — 30 min  
 
 ## Desarrollo
-Comencé cargando el dataset de clientes del centro comercial y realicé un análisis exploratorio de sus principales variables:  
-edad, ingresos anuales y spending score.  
-También verifiqué la distribución por género y detecté la presencia de algunos outliers.  
+Comencé explorando el dataset de predicción de éxito estudiantil, verificando cuántas muestras y características incluía, así como el balance de las tres clases objetivo (Graduate, Enrolled y Dropout).  
 
-En la fase de preparación de datos, probé tres escalers (MinMax, Standard y Robust) y evalué cuál impactaba mejor en el clustering.  
-Luego apliqué **PCA** para reducir a 2 dimensiones y visualizar la varianza explicada, confirmando que con dos componentes se podía capturar más del 90% de la información relevante.  
+A lo largo de la práctica, seguí paso a paso la implementación guiada que nos brindó el profesor, completando los espacios vacíos del código y entendiendo el rol de cada componente.  
 
-En la parte de clustering, usé **KMeans** con un rango de K entre 2 y 8.  
-El **Elbow Method** y el **Silhouette Score** no coincidieron exactamente, pero ajustando al contexto de negocio (3–5 clusters esperados), elegí un valor de K coherente con ambas métricas.  
-Los clusters resultantes mostraron diferencias claras entre niveles de ingreso y gasto, lo que coincide con perfiles típicos de clientes en marketing.  
+Esto incluyó el RidgeClassifier con regularización L2, el RandomForestClassifier y cómo este último determina la importancia de las features.  
 
-Más adelante, probé otros algoritmos:  
-- **DBSCAN/HDBSCAN** para clusters de densidad irregular.  
-- **Gaussian Mixture Models** para clustering probabilístico.  
-- **Spectral y Agglomerative Clustering** para comparar enfoques jerárquicos y espectrales.  
+También repasé cómo funciona la validación cruzada, comparando KFold con StratifiedKFold, y entendí por qué este último es más adecuado en datasets desbalanceados.  
 
-Finalmente, complementé el análisis con **Feature Selection (Forward, Backward, RFE)** y lo comparé con PCA.  
-PCA resultó más efectivo en performance y visualización, aunque Feature Selection mantiene más interpretabilidad.  
+Más adelante, profundicé en la optimización de hiperparámetros con GridSearchCV y RandomizedSearchCV, comprendiendo sus diferencias y cuándo conviene aplicar cada técnica.  
 
-## Reflexiones finales
+Finalmente, respondí las preguntas de reflexión relacionadas con data leakage, la necesidad de usar Pipelines para evitarlo,  
+y la importancia de la explicabilidad y detección de sesgos en modelos de clasificación,  
+sobre todo en contextos sensibles como la educación o la medicina.  
 
-### Metodología CRISP-DM
-- La fase más desafiante fue *Data Preparation*, porque tuve que probar distintos scalers y métodos de reducción dimensional, con varias iteraciones para mejorar el clustering.  
-- El entendimiento del negocio fue clave al decidir el número de clusters: aunque las métricas sugerían valores distintos, en un contexto real tiene más sentido trabajar con 3–5 segmentos.  
+Procedo a adjuntar las preguntas del trabajo práctico:  
 
-### Data Preparation
-- El scaler más efectivo fue **PCA con datos previamente normalizados**, porque capturó la mayor parte de la varianza y mejoró el silhouette score.  
-- PCA fue más útil que Feature Selection, ya que permitió visualizar clusters y mejorar el rendimiento.  
-- El balance entre interpretabilidad y performance se inclinó hacia la performance, pero siempre considerando que en un negocio habría que traducir los componentes en insights concretos.  
+IA I Tarea 5:  
 
-### Clustering
-- Elbow Method y Silhouette no coincidieron del todo, pero con el contexto de negocio se eligió un K apropiado.  
-- Los clusters encontrados tienen sentido desde la intuición: clientes con alto ingreso/bajo gasto, bajo ingreso/alto gasto, y perfiles intermedios.  
-- Si repitiera el análisis, probaría más algoritmos (como DBSCAN o Agglomerative) para validar la robustez de los resultados.  
+Pistas:  
+- RidgeClassifier: Documentación - Clasificador con regularización L2  
+- RandomForestClassifier: Documentación - Ensemble de árboles de decisión  
+- cross_val_score: Documentación - Para validación cruzada automática  
+- StratifiedKFold: Documentación - KFold que mantiene proporción de clases  
+- StandardScaler: Documentación - Estandariza características (media=0, std=1)  
 
-### Aplicación práctica
-- En un entorno empresarial, presentaría los resultados con visualizaciones claras (mapas de calor, PCA, t-SNE, UMAP) para mostrar cómo se diferencian los grupos.  
-- El valor de la segmentación es claro: diseñar campañas personalizadas, optimizar recursos y mejorar la efectividad de la inversión publicitaria.  
-- La principal limitación es la simplicidad del dataset y el supuesto de clusters esféricos de KMeans, que puede no reflejar la realidad.  
+### Preguntas para investigar  
 
-## Preguntas guía
+- ¿Cuántas muestras y características tiene el dataset?  
+  Tiene 4424 instancias (muestras) y 36 características (features).  
 
-- **¿Qué algoritmo funciona mejor con clusters de densidad variable?**  
-  DBSCAN o HDBSCAN.  
+- ¿Qué tipos de variables incluye? (demográficas, académicas, socioeconómicas)  
+  Incluye varios tipos:  
+  - Demográficas: nacionalidad, estado civil, modalidad de aplicación.  
+  - Académicas: calificación de la cualificación previa, tipo de cualificación anterior, camino académico.  
+  - Socioeconómicas: nivel educativo de los padres, modalidad de aplicación específica.  
+  - Además de variables categóricas y numéricas.  
 
-- **¿Cuándo usar clustering jerárquico vs particional?**  
-  Jerárquico cuando se buscan dendrogramas o estructura jerárquica, particional (KMeans, GMM) cuando ya se conoce el número de clusters.  
+- ¿Las clases están balanceadas o desbalanceadas?  
+  No, están desbalanceadas:  
+  - Graduate: 2209 (~50%)  
+  - Dropout: 1421 (~32%)  
+  - Enrolled: 794 (~18%)  
 
-- **¿Cómo afecta la dimensionalidad a diferentes algoritmos?**  
-  Algoritmos como KMeans sufren en alta dimensión; conviene aplicar reducción como PCA, t-SNE o UMAP primero.  
+- ¿Qué significan las 3 categorías objetivo?  
+  - Dropout: estudiantes que abandonan.  
+  - Enrolled: estudiantes que siguen inscritos.  
+  - Graduate: estudiantes que se gradúan.  
 
-- **¿Qué ventajas tiene RFE sobre Forward/Backward selection?**  
-  RFE es iterativo y considera interacciones entre features, mientras que Forward/Backward son más simples pero pueden pasar por alto combinaciones óptimas.  
+## Ridge Classifier con regularización L2
+La regularización L2 es una técnica para evitar el sobreajuste (overfitting) en modelos de Machine Learning.  
+Se agrega un término de penalización a la función de costo del modelo.  
+A diferencia de L1 (Lasso), que lleva algunos coeficientes a 0, L2 los reduce en magnitud sin eliminarlos.  
+
+Coeficientes = Pesos que el modelo le asigna a las features.  
+
+## Random Forest
+Random Forest no necesita StandardScaler porque hace divisiones por umbrales y no depende de la magnitud de las variables.  
+
+## Métricas
+- Accuracy: proporción de predicciones correctas sobre el total.  
+- Precision: de todos los ejemplos que el modelo marcó como positivos, cuántos eran realmente positivos.  
+- Recall: de todos los positivos reales, cuántos detectó el modelo.  
+- F1-score: balance entre precision y recall.  
+
+## Cross-validation
+Es una técnica para evaluar la capacidad de un modelo de generalizar a datos nuevos.  
+Consiste en dividir el dataset en varios subconjuntos (folds), entrenar el modelo con algunos y probarlo con los restantes, repitiendo el proceso varias veces.  
+
+### BONUS: ¿Qué significan las métricas de validación?  
+
+1. Cross-Validation: divide los datos en varias partes (folds) para entrenar y evaluar múltiples veces.  
+2. Accuracy promedio: proporción de predicciones correctas promediada en todas las divisiones.  
+3. Desviación estándar: indica qué tan estable es el modelo.  
+4. StratifiedKFold: mantiene la proporción de clases en cada fold, útil en datasets desbalanceados.  
+
+Un modelo estable tiene baja variabilidad.  
+En medicina se prefiere un modelo consistente, ya que genera confianza en sus predicciones.  
+
+## Optimización de hiperparámetros
+- GridSearchCV: prueba todas las combinaciones posibles en la grilla (preciso pero lento).  
+- RandomizedSearchCV: prueba combinaciones al azar (rápido pero no garantiza el óptimo).  
+
+## Data leakage
+Ocurre cuando información de validación/prueba se filtra al entrenamiento.  
+Pipeline + SearchCV lo evitan porque cada transformación se ajusta solo con los datos de entrenamiento de cada fold, y luego se aplica al de validación.  
+
+## Feature Importances en Random Forest
+El atributo `.feature_importances_` mide cuánto reduce la impureza cada variable en promedio en todos los árboles.  
+Si una feature contribuye mucho a separar bien las clases, tendrá mayor importancia.  
+
+## Preguntas simples  
+
+1. ¿Qué es data leakage y por qué es peligroso?  
+   Data leakage es cuando ocurre una fuga de datos de validación hacia el modelo, lo que hace que parezca más preciso de lo que realmente es, impidiendo evaluar su verdadera capacidad de generalización.  
+
+2. ¿Cuándo usar KFold vs StratifiedKFold?  
+   Cuando las clases están balanceadas se puede usar KFold.  
+   Cuando están desbalanceadas, conviene StratifiedKFold, ya que mantiene proporciones equitativas en cada fold.  
+
+3. ¿Cómo interpretar "95.2% ± 2.1%" en cross-validation?  
+   Significa que el modelo obtiene en promedio 95.2% de accuracy, con una variabilidad (desviación estándar) de ±2.1% entre los folds.  
+
+4. ¿Por qué Random Forest no necesita StandardScaler?  
+   Porque trabaja con divisiones por umbrales y no depende de la magnitud de las variables.  
+
+5. En diagnóstico médico, ¿prefieres un modelo con 98% accuracy pero inestable, o 95% accuracy pero muy estable?  
+   Prefiero un modelo con 95% de accuracy pero muy estable, ya que garantiza predicciones consistentes y confiables, lo cual es esencial en medicina.  
 
 ## Evidencias
-https://colab.research.google.com/drive/1rV6ceo7dek2TWGXXGCQdqTuQzxl9rCBe?usp=sharing
+https://colab.research.google.com/drive/1-FtzjbWMymjJyy42tHkszzyLcHcm7Zt3?usp=sharing  
 
 ## Reflexión  
-Mediante este trabajo, pude aprender en profundidad el uso de distintos algoritmos de clustering  
-y cómo la reducción de dimensionalidad con PCA ayuda a visualizar y mejorar la calidad de los segmentos.  
+Mediante este trabajo, pude aprender el concepto y uso de varios classifiers,  
+y entender en qué situaciones conviene utilizar cada uno.  
 
-También comprendí la importancia de la fase de preparación de datos,  
-ya que la elección del scaler y de la técnica de reducción influye directamente en la separación de los clusters.  
+También comprendí la importancia de evitar el data leakage,  
+qué significa este problema y cómo puede afectar la evaluación del modelo.  
 
-Por último, afianzé el concepto de cómo elegir el número óptimo de clusters con métodos como Elbow y Silhouette,  
-y entendí que, más allá de las métricas, siempre es necesario considerar el contexto de negocio para que la segmentación sea realmente útil.  
-
-Este trabajo me permitió valorar la diferencia entre interpretabilidad y performance,  
-y ver cómo cada técnica (PCA, Feature Selection, DBSCAN, GMM, etc.) aporta distintas perspectivas para el análisis.  
+Por último, pude afianzar el concepto de cross-validation,  
+y entender por qué es una técnica tan útil para medir qué tan bien generaliza el modelo ante datos nuevos,  
+entendiendo los dos tipos de approaches: KFold y StratifiedKFold, y cuándo utilizar cada uno.  
 
 ## Próximos pasos
-En próximas prácticas quiero comparar formalmente los algoritmos de clustering alternativos (DBSCAN, HDBSCAN, GMM)  
-y explorar cómo combinarlos con técnicas de visualización como t-SNE y UMAP para datasets de mayor dimensionalidad.  
-
+Procedí a realizar la tarea 6

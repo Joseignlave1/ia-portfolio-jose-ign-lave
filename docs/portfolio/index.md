@@ -15,3 +15,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Cuarta Entrada: [04-resumen-primer-irat.md](04-resumen-primer-irat.md)
 - Quinta Entrada: [05-trabajo-practico4.md](05-trabajo-practico4.md)
 - Sexta Entrada: [06-trabajo-practico5.md](06-trabajo-practico5.md)
+- Séptima Entrada: [07-trabajo-practico5.md](06-trabajo-practico5.md)
