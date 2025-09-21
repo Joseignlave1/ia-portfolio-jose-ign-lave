@@ -86,7 +86,7 @@ PCA resultó más efectivo en performance y visualización, aunque Feature Selec
   RFE es iterativo y considera interacciones entre features, mientras que Forward/Backward son más simples pero pueden pasar por alto combinaciones óptimas.  
 
 ## Evidencias
-https://colab.research.google.com/drive/xxxx?usp=sharing  
+https://colab.research.google.com/drive/1rV6ceo7dek2TWGXXGCQdqTuQzxl9rCBe?authuser=0#scrollTo=aNvuG3tsPn-0
 
 ## Reflexión  
 Mediante este trabajo, pude aprender en profundidad el uso de distintos algoritmos de clustering  
