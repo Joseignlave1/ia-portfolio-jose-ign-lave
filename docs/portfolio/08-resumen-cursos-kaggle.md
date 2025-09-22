@@ -25,7 +25,7 @@ Se trabajó con librerías como **pandas**, **numpy** y **scikit-learn**, aplica
 ## Un modelo y CRISP-DM
 Un **modelo** es una representación matemática que aprende patrones de los datos para predecir un resultado.  
 El flujo de trabajo sigue **CRISP-DM**:  
-![CRISP-DM](assets/image1.png)
+![CRISP-DM](../assets/image1.png)
 
 ---
 ## Métodos de pandas y exploración de datos
@@ -37,11 +37,10 @@ El flujo de trabajo sigue **CRISP-DM**:
 - `train.dropna(axis=0)`: eliminar filas con valores vacíos.  
 - `train.describe()`: estadísticas descriptivas.  
 
-![EDA](assets/image2.png)  
-![EDA_NaN](assets/image3.png)  
-![EDA_Survived](assets/image4.png)  
-![EDA_Extra](assets/image5.png)  
-![EDA_Extra2](assets/image6.png)  
+![EDA](../assets/image2.png)  
+![EDA_NaN](../assets/image3.png)  
+![EDA_Survived](../assets/image4.png)
+![EDA_Extra2](../assets/image6.png)  
 
 ---
 ## Construcción de un modelo
@@ -52,7 +51,7 @@ El flujo de trabajo sigue **CRISP-DM**:
 `X = melbourne_data[melbourne_features]`  
 
 ### Pasos para construir un modelo
-![PasosModelo](assets/image7.png)
+![PasosModelo](../assets/image7.png)
 
 ### Definir y entrenar el modelo
 from sklearn.tree import DecisionTreeRegressor  
@@ -78,8 +77,8 @@ ya que si solo usamos los datos de entrenamiento podríamos sobreestimar su rend
 El **overfitting** ocurre cuando el modelo memoriza demasiado los datos de entrenamiento  
 y pierde capacidad de generalizar en datos nuevos.
 
-![Split](assets/image9.png)  
-![Overfitting](assets/image10.png)
+![Split](../assets/image9.png)  
+![Overfitting](../assets/image10.png)
 
 Ejemplo de comparación de errores según cantidad de hojas en el árbol:
 
@@ -92,15 +91,14 @@ for max_leaf_nodes in [5, 50, 500, 5000]:
 ## EDA Visualizaciones
 Durante la exploración de datos podemos visualizar distribuciones, valores faltantes y relaciones entre variables.  
 
-![EDA_Visual1](assets/image11.png)  
-![EDA_Visual2](assets/image12.png)  
-![EDA_Visual3](assets/image13.png)  
+![EDA_Visual1](../assets/image11.png)  
+![EDA_Visual3](../assets/image13.png)  
 
 ---
 
 ## Manejo de valores faltantes
 
-![MissingValues](assets/image14.png)  
+![MissingValues](../assets/image14.png)  
 
 Existen varias técnicas para manejar valores faltantes en un dataset:
 
@@ -108,24 +106,24 @@ Existen varias técnicas para manejar valores faltantes en un dataset:
    Consiste en eliminar filas o columnas con datos faltantes.  
    ⚠️ No recomendado porque puede eliminar información valiosa.  
 
-   ![DropExample](assets/image37.png)  
-   ![DropExample2](assets/image38.png)  
+   ![DropExample](../assets/image37.png)  
+   ![DropExample2](../assets/image38.png)  
 
 2. **Imputation**  
    Se rellenan los valores faltantes con la media, mediana o moda.  
    Por defecto, `SimpleImputer()` usa la mediana.  
 
-   ![Imputation](assets/image39.png)  
-   ![ImputationStrategies](assets/image40.png)  
-   ![ImputationExample](assets/image41.png)  
-   ![Strategies](assets/image42.png)  
+   ![Imputation](../assets/image39.png)  
+   ![ImputationStrategies](../assets/image40.png)  
+   ![ImputationExample](../assets/image41.png)  
+   ![Strategies](../assets/image42.png)  
 
 3. **Extension to Imputation**  
    Además de imputar, se crea una columna booleana que marca si un valor fue imputado (TRUE/FALSE).  
    Esto permite al modelo saber dónde había datos faltantes.  
 
-   ![Extension](assets/image43.png)  
-   ![ExtensionExample](assets/image44.png)  
+   ![Extension](../assets/image43.png)  
+   ![ExtensionExample](../assets/image44.png)  
 
 ---
 ## Variables Categóricas
@@ -137,7 +135,7 @@ Antes de usarlas en un modelo de Machine Learning, deben **preprocesarse**.
 
 Para identificarlas podemos filtrar las columnas con tipo de dato `object` (strings).  
 
-![ObjectColumns](assets/image45.png)  
+![ObjectColumns](../assets/image45.png)  
 
 ---
 
@@ -145,24 +143,24 @@ Para identificarlas podemos filtrar las columnas con tipo de dato `object` (stri
 
 1. **Drop Categorical Variables**  
    Eliminar columnas categóricas que no aportan información útil.  
-   ![DropCategorical](assets/image46.png)  
+   ![DropCategorical](../assets/image46.png)  
    Ejemplo:  
-   ![DropExample](assets/image47.png)  
+   ![DropExample](../assets/image47.png)  
 
 2. **Ordinal Encoding**  
    Convierte las categorías en números enteros, asumiendo un orden lógico.  
-   ![OrdinalEncoding](assets/image48.png)  
+   ![OrdinalEncoding](../assets/image48.png)  
    Ejemplo:  
-   ![OrdinalExample](assets/image49.png)  
+   ![OrdinalExample](../assets/image49.png)  
 
 3. **One-Hot Encoding**  
    Crea nuevas columnas binarias (0/1) para cada categoría, sin asumir un orden.  
    Útil para categorías nominales.  
    ⚠️ No recomendable cuando hay muchas categorías (>15), ya que aumenta exponencialmente las columnas.  
-   ![OneHot](assets/image50.png)  
+   ![OneHot](../assets/image50.png)  
    Ejemplo:  
-   ![OneHotExample1](assets/image51.png)  
-   ![OneHotExample2](assets/image52.png)  
+   ![OneHotExample1](../assets/image51.png)  
+   ![OneHotExample2](../assets/image52.png)  
 
 ---
 ## Pipelines
@@ -171,13 +169,13 @@ Un **Pipeline** permite empaquetar todos los pasos de construcción de un modelo
 (entrenamiento, transformaciones y predicciones) en un solo objeto.  
 Esto facilita la ejecución y el mantenimiento, además de evitar fugas de datos (**data leakage**).  
 
-![Pipeline](assets/image53.png)  
+![Pipeline](../assets/image53.png)  
 
 Ejemplo de pipeline con RandomForest:  
-![PipelineSteps](assets/image54.png)  
-![PipelineDetail](assets/image55.png)  
-![PipelineRF1](assets/image56.png)  
-![PipelineRF2](assets/image57.png)  
+![PipelineSteps](../assets/image54.png)  
+![PipelineDetail](../assets/image55.png)  
+![PipelineRF1](../assets/image56.png)  
+![PipelineRF2](../assets/image57.png)  
 
 ---
 
@@ -189,7 +187,7 @@ El rendimiento final es el promedio de los resultados en cada fold.
 
 Ventaja: proporciona una estimación más robusta de la capacidad de generalización del modelo.  
 
-![CV](assets/image58.png)  
+![CV](../assets/image58.png)  
 
 Ejemplo con k=5:  
 - Cada fold tiene el 20% de los datos.  
@@ -201,10 +199,10 @@ Ejemplo con k=5:
 - **Datasets pequeños** → conviene usar cross-validation.  
 - **Datasets grandes** → single validation es suficiente (ahorra recursos).  
 
-![CVExample1](assets/image59.png)  
-![CVExample2](assets/image60.png)  
-![CVExample3](assets/image61.png)  
-![CVExample4](assets/image62.png)  
+![CVExample1](../assets/image59.png)  
+![CVExample2](../assets/image60.png)  
+![CVExample3](../assets/image61.png)  
+![CVExample4](../assets/image62.png)  
 
 ---
 ## Gradient Boosting
@@ -219,7 +217,7 @@ El proceso:
 4. Los modelos se combinan sumando sus predicciones.  
 5. El ciclo se repite varias veces.  
 
-![GB](assets/image63.png)  
+![GB](../assets/image63.png)  
 
 ---
 
@@ -241,8 +239,8 @@ El proceso:
 - **n_jobs**  
   Permite usar varios núcleos del procesador en paralelo para acelerar el entrenamiento.  
 
-![GB_Params1](assets/image64.png)  
-![GB_Params2](assets/image65.png)  
+![GB_Params1](../assets/image64.png)  
+![GB_Params2](../assets/image65.png)  
 
 ---
 ## Data Leakage
@@ -258,9 +256,8 @@ Sucede cuando ciertas variables contienen información que solo se conoce despu�
 Ejemplo: usar el campo `took_antibiotic_medicine` para predecir neumonía.  
 Ese dato solo se conoce tras el diagnóstico, no antes.  
 
-![TargetLeakage1](assets/image66.png)  
-![TargetLeakage2](assets/image67.png)  
-![TargetLeakage3](assets/image68.png)  
+![TargetLeakage2](../assets/image67.png)  
+![TargetLeakage3](../assets/image68.png)  
 
 ---
 
@@ -268,14 +265,14 @@ Ese dato solo se conoce tras el diagnóstico, no antes.
 Ocurre cuando datos del conjunto de validación se filtran en el entrenamiento,  
 ya sea por una mala división de los datos o por aplicar transformaciones antes del split.  
 
-![Contamination1](assets/image69.png)  
-![Contamination2](assets/image70.png)  
+![Contamination1](../assets/image69.png)  
+![Contamination2](../assets/image70.png)  
 
 **Cómo evitarlo:**  
 - Dividir primero en train y test, y recién después aplicar transformaciones.  
 - Usar **pipelines**, ya que se ajustan solo con datos de entrenamiento en cada fold.  
 
-![ContaminationFix](assets/image71.png)  
+![ContaminationFix](../assets/image71.png)  
 
 ---
 
@@ -291,19 +288,19 @@ Las métricas permiten evaluar qué tan bien performa un modelo.
 
 ### Accuracy
 Proporción de predicciones correctas (positivas y negativas) sobre el total.  
-![Accuracy](assets/image22.png)  
+![Accuracy](../assets/image22.png)  
 
 ---
 
 ### Precision
 De todos los casos que el modelo predijo como positivos, ¿cuántos realmente lo eran?  
-![Precision](assets/image23.png)  
+![Precision](../assets/image23.png)  
 
 ---
 
 ### Recall
 De todos los casos positivos reales, ¿cuántos identificó correctamente el modelo?  
-![Recall](assets/image24.png)  
+![Recall](../assets/image24.png)  
 
 ---
 
@@ -311,7 +308,7 @@ De todos los casos positivos reales, ¿cuántos identificó correctamente el mod
 Promedio armónico entre *precision* y *recall*.  
 Mide qué tan balanceado está el modelo entre ambas métricas.  
 Siempre da un valor entre 0 y 1.  
-![F1](assets/image25.png)  
+![F1](../assets/image25.png)  
 
 ---
 
@@ -325,7 +322,7 @@ Ya visto en la construcción del modelo.
 
 ### Mean Squared Error (MSE)
 Promedio de los errores al cuadrado. Penaliza más los errores grandes.  
-![MSE](assets/image31.png)  
+![MSE](../assets/image31.png)  
 
 ---
 
@@ -336,9 +333,9 @@ El modelo predice valores continuos.
 - W = coeficientes (peso de cada feature).  
 - B = bias.  
 
-![Linear1](assets/image28.png)  
-![Linear2](assets/image29.png)  
-![Linear3](assets/image30.png)  
+![Linear1](../assets/image28.png)  
+![Linear2](../assets/image29.png)  
+![Linear3](../assets/image30.png)  
 
 ---
 
@@ -348,15 +345,14 @@ El output es una probabilidad entre 0 y 1.
 - Si P ≥ 0.5 → predice 1 (Sí).  
 - Si P < 0.5 → predice 0 (No).  
 
-![Logistic1](assets/image32.png)  
-![Logistic2](assets/image33.png)  
-![Logistic3](assets/image34.png)  
+![Logistic1](../assets/image32.png)  
+![Logistic2](../assets/image33.png)  
+![Logistic3](../assets/image34.png)  
 
 ### Cross-Entropy (Log-Loss)
 Métrica para evaluar clasificación probabilística.  
 Mide qué tan bien la probabilidad predicha se acerca a la clasificación real.  
-![LogLoss](assets/image35.png)  
-![LogLossDiff](assets/image36.png)  
+![LogLossDiff](../assets/image36.png)  
 
 ---
 
