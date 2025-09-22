@@ -66,7 +66,6 @@ print(melbourne_model.predict(X.head()))
 
 ### Evaluar con MAE
 **Mean Absolute Error (MAE):** mide en promedio cuánto se alejan las predicciones de los valores reales.  
-![MAE](assets/image8.png)
 
 ---
 ## Train/Test Split y Overfitting
