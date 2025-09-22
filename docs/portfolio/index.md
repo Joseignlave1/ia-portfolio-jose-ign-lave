@@ -16,3 +16,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Quinta Entrada: [05-trabajo-practico4.md](05-trabajo-practico4.md)
 - Sexta Entrada: [06-trabajo-practico5.md](06-trabajo-practico5.md)
 - Séptima Entrada: [07-trabajo-practico5.md](07-trabajo-practico6.md)
+- Octava Entrada: [08-resumen-cursos-kaggle.md](08-resumen-cursos-kaggle.md)
