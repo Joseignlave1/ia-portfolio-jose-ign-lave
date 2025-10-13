@@ -152,4 +152,4 @@ También pude visualizar cómo las curvas de aprendizaje ayudan a diagnosticar e
 En general, siento que logré afianzar los conceptos esenciales que serán la base para los próximos temas de redes convolucionales y modelos más complejos.
 
 ## Próximos pasos
-Procedí a realizar la **Tarea 1 de la UT2**, donde comenzamos a aplicar redes neuronales en problemas más concretos y a analizar su comportamiento en datasets reales.
+Procedí a realizar una tarea extra, realizando el proceso de aplanar -> entrenar -> MLP con el dataset de MNIST
