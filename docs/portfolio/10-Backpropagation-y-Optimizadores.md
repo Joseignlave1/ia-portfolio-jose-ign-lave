@@ -41,7 +41,7 @@ En esta práctica la idea fue experimentar con los **hiperparámetros** para mej
 - Probar con **RMSprop**, que tiende a adaptarse mejor a datasets con ruido visual como CIFAR-10.
 
 ## Evidencias
-https://colab.research.google.com/drive/1dYgKfiXvHYpML0v59z4nGE1t2tbW0BiN
+https://colab.research.google.com/drive/1wnhoBPl1I8kCquGT1nKWJC1bwGWHw56w
 
 ## Reflexión
 Mediante esta práctica pude entender con mayor claridad cómo la red neuronal aprende de sus errores a través del proceso de backpropagation y cómo los distintos optimizadores influyen en la rapidez y estabilidad del entrenamiento.  
