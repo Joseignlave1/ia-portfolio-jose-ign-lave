@@ -19,3 +19,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Octava Entrada: [08-resumen-cursos-kaggle.md](08-resumen-cursos-kaggle.md)
 - Redes Neuronales: del Perceptrón al MLP: [09-Redes-Neuronales-del-Perceptrón-al-MLP.md](09-Redes-Neuronales-del-Perceptrón-al-MLP.md)
 - 10-Backpropagation-y-Optimizadores: [10-Backpropagation-y-Optimizadores.md](10-Backpropagation-y-Optimizadores.md)
+- 11-Backpropagation-y-Optimizadores: [11-resumen-segundo-irat.md](11-resumen-segundo-irat.md)
