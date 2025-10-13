@@ -49,4 +49,4 @@ También comprobé que los hiperparámetros tienen un impacto directo en la perf
 Por último, confirmé que aunque los MLP funcionan bien para datos tabulares o estructurados, las imágenes requieren arquitecturas más avanzadas como las redes convolucionales (CNNs).
 
 ## Próximos pasos
-Procederé a realizar la **Tarea 2 de la UT2**, donde se aplicarán redes convolucionales (CNN) para mejorar los resultados obtenidos en CIFAR-10.
+Procederé a realizar un resumen para el segundo IRAT.
