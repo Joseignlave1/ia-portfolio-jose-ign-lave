@@ -17,3 +17,5 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Sexta Entrada: [06-trabajo-practico5.md](06-trabajo-practico5.md)
 - Séptima Entrada: [07-trabajo-practico5.md](07-trabajo-practico6.md)
 - Octava Entrada: [08-resumen-cursos-kaggle.md](08-resumen-cursos-kaggle.md)
+- Redes Neuronales: del Perceptrón al MLP: [09-Redes-Neuronales-del-Perceptrón-al-MLP.md](09-Redes-Neuronales-del-Perceptrón-al-MLP.md)
+- 10-Backpropagation-y-Optimizadores: [10-Backpropagation-y-Optimizadores.md](10-Backpropagation-y-Optimizadores.md)
