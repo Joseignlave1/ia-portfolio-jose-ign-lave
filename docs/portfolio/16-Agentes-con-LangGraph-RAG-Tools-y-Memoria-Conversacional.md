@@ -62,7 +62,7 @@ Finalmente creé una interfaz en **Gradio**, mostrando:
 Esto permitió observar claramente el funcionamiento interno del agente, el ruteo, y la evolución del estado.
 
 ## Evidencias
-(Enlace al Google Colab — agregado manualmente)
+Agregar repo de collab
 
 ## Reflexión
 Este assignment fue clave para comprender cómo se construyen agentes modernos más allá de un simple LLM que responde mensajes.
