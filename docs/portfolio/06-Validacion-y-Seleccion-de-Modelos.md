@@ -3,7 +3,7 @@ title: "Entrada 06 — Clasificación y Validación de Modelos"
 date: 2025-09-21
 ---
 
-# Entrada 06 — Quinto trabajo práctico~~
+# Entrada 06 — Validacion y Seleccion de Modelos~~
 ~~
 
 ## Contexto

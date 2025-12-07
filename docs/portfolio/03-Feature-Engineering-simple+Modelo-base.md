@@ -3,7 +3,7 @@ title: "Entrada 03 — Segundo Trabajo Práctico"
 date: 2025-01-01
 ---
 
-# Entrada 03 — Segundo Trabajo Práctico~~
+# Entrada 03 — Feature-Engineering simple + Modelo base
 ~~
 ## Contexto
 Segundo trabajo práctico del curso. En esta ocasión empezamos a entender el concepto de Feature Engineering, y a entender conceptualmente cómo funcionan tipos de modelos, empezando por los de regresión logística "Logistic Regression",

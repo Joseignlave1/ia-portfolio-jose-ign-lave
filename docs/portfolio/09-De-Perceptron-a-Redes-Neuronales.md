@@ -3,7 +3,7 @@ title: "Entrada 09 — Redes Neuronales: del Perceptrón al MLP"
 date: 2025-10-10
 ---
 
-# Entrada 09 — Redes Neuronales: del Perceptrón al MLP
+# Entrada 09 — De Perceptron a Redes Neuronales
 
 ## Contexto
 En esta práctica analizamos cómo las redes neuronales evolucionan desde el perceptrón simple hasta el modelo multicapa (MLP), explorando su capacidad para resolver problemas no lineales.  

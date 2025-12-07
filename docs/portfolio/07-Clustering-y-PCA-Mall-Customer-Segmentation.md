@@ -3,7 +3,7 @@ title: "Entrada 06 — Clustering y PCA: Segmentación de Clientes"
 date: 2025-09-21
 ---
 
-# Entrada 06 — Sexto trabajo práctico
+# Entrada 06 — Clustering y PCA Mall Customer Segmentation
 
 ## Contexto
 En este trabajo práctico exploramos técnicas de **segmentación de clientes** aplicando algoritmos de clustering y reducción de dimensionalidad.  

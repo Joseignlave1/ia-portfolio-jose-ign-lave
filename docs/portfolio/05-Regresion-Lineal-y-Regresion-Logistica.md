@@ -3,7 +3,7 @@ title: "Entrada 05 — Regresión Lineal y Logística"
 date: 2025-09-21
 ---
 
-# Entrada 05 — Cuarto trabajo práctico~~
+# Entrada 05 — Regresion Lineal y Regresion Logistica~~
 ~~
 
 ## Contexto

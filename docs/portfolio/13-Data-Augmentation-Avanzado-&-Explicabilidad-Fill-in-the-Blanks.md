@@ -3,7 +3,7 @@ title: "Entrada 13 — Robustez y Explicabilidad en Computer Vision con TensorFl
 date: 2025-11-02
 ---
 
-# Entrada 13 — UT3 Robustez y Explicabilidad en Visión por Computadora
+# Entrada 13 — Data Augmentation Avanzado & Explicabilidad Fill in the Blanks
 ~~
 
 ## Contexto

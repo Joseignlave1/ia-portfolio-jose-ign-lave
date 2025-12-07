@@ -3,7 +3,7 @@ title: "Entrada 01 — Mi primera experiencia"
 date: 2025-01-01
 ---
 
-# Entrada 01 — Mi primera experiencia
+# Entrada 01 — Entrada de Ejemplo
 
 ## Contexto
 Actividad inicial del curso.
