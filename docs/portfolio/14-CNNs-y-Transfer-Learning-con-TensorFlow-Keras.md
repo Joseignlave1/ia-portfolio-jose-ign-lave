@@ -1,9 +1,9 @@
 ---
-title: "Entrada 12 — UT3 CNNs y Transfer Learning con TensorFlow/Keras"
+title: "Entrada 13 — UT3 CNNs y Transfer Learning con TensorFlow/Keras"
 date: 2025-10-25
 ---
 
-# Entrada 12 — CNNs y Transfer Learning con TensorFlow-Keras~~
+# Entrada 14— CNNs y Transfer Learning con TensorFlow-Keras~~
 ~~
 
 ## Contexto

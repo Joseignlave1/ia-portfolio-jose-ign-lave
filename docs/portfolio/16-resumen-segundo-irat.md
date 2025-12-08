@@ -3,7 +3,7 @@ title: "Entrada 08 — Resumen del segundo IRAT"
 date: 2025-10-13
 ---
 
-# Entrada 08 — Resumen del segundo IRAT~~
+# Entrada 16 — Resumen del segundo IRAT~~
 ~~
 
 ## Contexto

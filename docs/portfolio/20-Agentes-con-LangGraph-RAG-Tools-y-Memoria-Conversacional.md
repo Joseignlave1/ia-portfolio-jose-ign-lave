@@ -3,7 +3,7 @@ title: "Entrada 16 — Agentes con LangGraph: RAG, Tools y Memoria Conversaciona
 date: 2025-11-15
 ---
 
-# Entrada 16 — Agentes con LangGraph: RAG, Tools y Memoria Conversacional
+# Entrada 20 — Agentes con LangGraph: RAG, Tools y Memoria Conversacional
 ~~
 
 ## Contexto
@@ -62,7 +62,7 @@ Finalmente creé una interfaz en **Gradio**, mostrando:
 Esto permitió observar claramente el funcionamiento interno del agente, el ruteo, y la evolución del estado.
 
 ## Evidencias
-Agregar repo de collab
+https://colab.research.google.com/drive/1caFfFxl4r9cURqmuZdxI0Ftm1Af9EhBd
 
 ## Reflexión
 Este assignment fue clave para comprender cómo se construyen agentes modernos más allá de un simple LLM que responde mensajes.
@@ -99,4 +99,4 @@ La UI permitió probar turnos reales, ver qué tool se invoca en cada respuesta
 y validar que la arquitectura funciona incluso en escenarios de uso prolongado.
 
 ## Próximos pasos
-Procedí a realizar la tarea Explorando GCloud de la UT5
+Procedí a investigar más sobre los distintos tipos de agentes, y el concepto de RAG.

@@ -3,7 +3,7 @@ title: "Entrada 14 — UT4 Clasificación de Sentimiento Financiero con TF-IDF y
 date: 2025-11-10
 ---
 
-# Entrada 14 — Fine-tuning-de-Transformers-para-Clasificación-Ofensiva
+# Entrada 18 — Fine-tuning-de-Transformers-para-Clasificación-Ofensiva
 ~~
 
 ## Contexto

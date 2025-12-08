@@ -3,7 +3,7 @@ title: "Entrada 07 — Construcción y Evaluación de Modelos"
 date: 2025-09-21
 ---
 
-# Entrada 07 — Resumen de curso Kaggle~~
+# Entrada 09 — Resumen de curso Kaggle~~
 ~~
 
 ## Contexto

@@ -3,7 +3,7 @@ title: "Entrada 15 — LLMs con LangChain (OpenAI): Prompting, Plantillas y Sali
 date: 2025-11-14
 ---
 
-# Entrada 15 — LLMs con LangChain (OpenAI): Prompting, Plantillas y Salida Estructurada
+# Entrada 21 — LLMs con LangChain (OpenAI): Prompting, Plantillas y Salida Estructurada
 ~~
 
 ## Contexto
@@ -67,7 +67,7 @@ Luego resolví mini-tareas guiadas:
 - Finalicé con un **RAG básico** usando embeddings + FAISS para recuperar contexto antes de generar la respuesta.  
 
 ## Evidencias
--Agregar repo de collab
+https://colab.research.google.com/drive/1ENTbzvzTu0RRARnkqVmi15kY8QlpjQFV#scrollTo=m4pJxBuV4BZn
 
 ## Reflexión
 Este trabajo me permitió entender a fondo cómo se construyen aplicaciones modernas basadas en LLMs utilizando LangChain  
